@@ -1,0 +1,17 @@
+$accent-blue: #37bbe4;
+
+footer {
+  font-size: 0.75em;
+  text-align: center;
+  padding-top: 10em;
+
+  span {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: $accent-blue;
+    }
+  }
+
+}

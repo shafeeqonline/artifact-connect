@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import './style.scss';
 
 export default class Footer extends Component {
   render() {
-    console.log("Shafeeq");
     return (
       <footer>
         <span id="footer-text-wrap">

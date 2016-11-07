@@ -1,10 +1,8 @@
 
 $main-bg-color: #f1f2f0;
-$accent-blue: #37bbe4;
 $accent-gray: #e1e0dd;
 $accent-black: #35342f;
 $accent-orange: #ec6b2d;
-$accent-red: #dd6464;
 
 body {
   background-color: $main-bg-color;
@@ -56,24 +54,5 @@ body {
     &:hover {
       background-color: $accent-gray;
     }
-  }
-}
-
-footer {
-  font-size: 0.75em;
-  text-align: center;
-  padding-top: 10em;
-
-  a {
-    text-decoration: none;
-    color: inherit;
-
-    &:hover {
-      color: $accent-blue;
-    }
-  }
-
-  #heart{
-    color: $accent-red;
   }
 }
