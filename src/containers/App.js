@@ -10,7 +10,7 @@ class App extends Component {
     const { counter, actions } = this.props;
     return (
       <div className="main-app-container">
-        <div className="main-app-nav">Project tracker App</div>
+        <div className="main-app-nav">artifact-connect App</div>
         <Counter counter={counter} actions={actions} />
         <Footer />
       </div>

@@ -1,7 +1,7 @@
 {
-  "name": "project-tracker",
+  "name": "artifact-connect",
   "version": "1.0.0",
-  "description": "Project tracker application built by studio.",
+  "description": "Connects multiple module repositories for a onestop platfom.",
   "scripts": {
     "clean": "rimraf dist",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
