@@ -1,0 +1,14 @@
+
+.header{
+	background-image: url("./background.png");
+}
+.nav-bar{
+	height:30px;
+	background-color:#535353;
+	span{
+		color: #E8E8E8;
+		padding: 0 5%;
+		display: inline-block;
+		vertical-align:  -webkit-baseline-middle;
+	}
+}

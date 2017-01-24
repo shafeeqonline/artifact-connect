@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/main.scss';
-
+import LandingPageContainer from './containers/landing-page-container'
+import {Provider} from 'react-redux';
 import { configureStore } from './store/configureStore';
-import { Root } from './containers/Root';
-
 const store = configureStore();
 
 ReactDOM.render(
-  <Root store={store} />,
-  document.getElementById('root')
+	<Provider store={store}>
+		<LandingPageContainer/>
+	</Provider>,document.getElementById('root')
 );
