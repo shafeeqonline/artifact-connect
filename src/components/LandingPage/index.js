@@ -17,11 +17,11 @@ export default class LandingPage extends Component{
 				<div>
 					<Header />
 					<PopularCategories />
-					<MostInstalledContainer />
+					{this.props.children}
 					<FrequentPackagesContainer />
 				</div>
 			)
 		}
-		
+
 	}
 }
