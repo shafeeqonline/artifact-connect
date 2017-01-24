@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import counter from './counter';
-
+import frequentPackageDetailReducer from './freq-packages-reducer';
+ 
 const rootReducer = combineReducers({
-  counter
+  frqPackages:frequentPackageDetailReducer
 });
 
 export default rootReducer;

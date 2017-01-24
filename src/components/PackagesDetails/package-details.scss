@@ -1,0 +1,28 @@
+.logo-container{
+	width:115px;
+	height: 80px;
+	text-align:center; 
+	display: inline-block;
+	.package-logo{
+		max-width:90%;
+		vertical-align: baseline;
+		height: 6em;
+	}
+
+}
+
+.package-info-container{
+	display: inline-block;
+	.package-description{
+		  width: 250px;
+		  white-space: nowrap;
+		  overflow: hidden;
+		  text-overflow: ellipsis;
+	}
+	.package-name a{
+		color:black;
+	}
+	.package-version a{
+		color: black;
+	}
+}

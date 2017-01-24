@@ -23,7 +23,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js?/,
+        test: /\.js$/,
         exclude: [/node_modules/, /styles/],
         loaders: ['babel'],
         include: path.join(__dirname, 'src')
@@ -31,6 +31,18 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: 'style!css!sass'
+      },
+      {
+        test: /\.(jpg|png)$/,
+        loader: 'file?name=images/[name].[ext]' 
+      },
+      {
+        test: /\.css$/,
+        loader: 'style!css'
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file?name=fonts/[name].[ext]'
       }
     ]
   }

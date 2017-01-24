@@ -1,2 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:100,400);
-@import './app.scss';
+@import './bootstrap.scss';
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}

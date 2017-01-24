@@ -1,0 +1,28 @@
+.popular-tag-container{
+	word-wrap: break-word;
+	text-align:center;
+	margin-top:20px;
+	.popular-tags{
+		padding:10px 0 0 0;
+		.text-size-1{
+			font-size: 12px;
+	    	color: #7b94b0;
+		}
+		.text-size-2{
+			font-size: 13px;
+	   		color: #6a89b0;
+		}
+		.text-size-3{
+			font-size: 14px;
+	    	color: #5880b0;
+		}
+		.text-size-4{
+			font-size: 16px;
+		    color: #4676b0;
+		}
+		.text-size-5{
+			font-size:18px;
+	    	color: #356cb0;
+		}
+	}
+}
