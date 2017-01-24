@@ -1,0 +1,36 @@
+.search-result{
+	margin:30px 0 0 0 ;
+	padding:0 2% 0 5%;
+	.results{
+		list-style: none;
+	}
+	.result-list{
+		padding:20px 0 20px 0;
+		border-bottom: 1px solid #C2C2C2;
+	}
+	.search-publisher{
+		cursor:pointer;
+		color:#CACACA;
+		font-size: 16px;
+	}
+	.result-description , .result-version {
+		padding:0 0 0 10%;
+	}
+	.search-result-title{
+		cursor:pointer;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.search-logo-container{
+	width:70px;
+	height: 50px;
+	text-align:left; 
+	display: inline-block;
+	vertical-align: bottom;
+	.search-package-logo{
+		max-width:90%;
+		height: 3em;
+	}
+
+}
+}

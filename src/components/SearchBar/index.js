@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {Link} from 'react-router';
 import './search-bar.scss';
 
 export default class SearchBar extends Component{
@@ -7,7 +7,9 @@ export default class SearchBar extends Component{
 		return(
 		<div className = 'search-bar'>
 			<input className = 'search-input' placeholder = 'Search'/>
-			<span className = 'search-icon fa fa-search'></span>
+			<Link to='/results'>
+				<span className = 'search-icon fa fa-search'></span>
+			</Link>
 		</div>
 		)
 	}
