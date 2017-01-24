@@ -1,0 +1,22 @@
+.disable-suggestions{
+	display:none;
+}
+.display-suggestions{
+	margin-top: 10px;
+	display: block;
+	position: relative;
+	z-index: 1;
+	div{
+		text-transform: capitalize;
+		padding-top: 15px;
+		height: 50px;
+		background-color: #E8E8E8;
+		&:hover{
+			background-color: #a09f9f;
+		}
+		a{
+			color:#000;
+		}
+	}
+
+}
