@@ -15,7 +15,7 @@ export default class FrequentPackages extends Component{
 			return (
 				<section className='popular-tag-container col-md-3'>
 					
-						<h3 className='popular-tags-header'>Popluar Tags</h3>
+						<h3 className='popular-tags-header'>Popular Tags</h3>
 						<div className='popular-tags'>
 						{packages}
 						</div>	

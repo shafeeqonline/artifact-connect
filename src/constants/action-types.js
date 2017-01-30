@@ -4,3 +4,6 @@ export const Request_FULFILLED_FREQ = 'Request_FULFILLED_FREQ';
 export const Request_REJECTED_FREQ = 'Request_REJECTED_FREQ';
 export const Result_SUCCESS = 'Result_SUCCESS';
 export const Result_FAIL = 'Result_FAIL';
+export const TOOGLING_SEARCH_SUGGESTIONS = 'TOOGLING_SEARCH_SUGGESTIONS';
+export const TOOGLING_SEARCH_SELECTED = 'TOOGLING_SEARCH_SELECTED';
+export const UPDATE_SEARCH_VALUE = 'UPDATE_SEARCH_VALUE';

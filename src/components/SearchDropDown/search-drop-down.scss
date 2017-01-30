@@ -2,20 +2,29 @@
 	display:none;
 }
 .display-suggestions{
-	margin-top: 10px;
+	
 	display: block;
 	position: relative;
 	z-index: 1;
+	border:1px solid #000;
+	.a{
+			color:#716f6f;
+			text-decoration: none;
+
+	}
 	div{
-		text-transform: capitalize;
+		font-family: 'SapientSansRegular';
+		padding-left: 2%;
 		padding-top: 15px;
 		height: 50px;
-		background-color: #E8E8E8;
+		background-color: #fff;
 		&:hover{
-			background-color: #a09f9f;
+			background-color: #E7E7E7;
 		}
-		a{
-			color:#000;
+		
+		.sub-string{
+			font-weight: bold; 
+			font-size:1.2em; 
 		}
 	}
 
