@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Result_SUCCESS, Result_FAIL, Search_SUCCESS, Search_FAIL} from '../constants/action-types';
+import { Result_SUCCESS, Result_FAIL, Search_SUCCESS, Search_FAIL, Details_SUCCESS, Details_FAIL} from '../constants/action-types';
 
 export function fetchResults(){
 		//AJAX call to fetch project list data
@@ -39,6 +39,28 @@ export function fetchSearchSuggestions(searchKey){
 	    // Dispatch the error action with error information
 		    dispatch({
 		        type: Search_FAIL,
+		        error: error
+		    });
+    	});
+	};
+
+}
+
+export function fetchPackageDetails(){
+	return function(dispatch){
+		axios.get('https://api.myjson.com/bins/vu825')
+		.then(function (response) {	
+			console.log(response.data.packagedetails)
+		    // Dispatch the success action with the payload
+    		dispatch({
+		        type: Details_SUCCESS,
+		        payload: response.data.packagedetails,
+        	});
+    	}.bind(this))
+	  	.catch(function (error) {
+	    // Dispatch the error action with error information
+		    dispatch({
+		        type: Details_FAIL,
 		        error: error
 		    });
     	});

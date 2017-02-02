@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
+import {browserHistory} from 'react-router';
 import SearchDropDown from './../SearchDropDown';
 import './search-bar.scss';
 import debounce from 'lodash.debounce';
@@ -39,7 +40,8 @@ export default class SearchBar extends Component{
 	        this.props.handleDownArrow(activeIndex,this.props.searchResults[activeIndex].value);
 	        break;
 	        case 13:
-	        
+	        browserHistory.push('/details')
+	        this.props.searchSuggestion(false);
 	        break;
 	    }
 	}

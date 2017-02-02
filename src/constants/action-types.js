@@ -10,3 +10,5 @@ export const UPDATE_SEARCH_VALUE = 'UPDATE_SEARCH_VALUE';
 export const Search_SUCCESS = 'Search_SUCCESS';
 export const Search_FAIL = 'Search_FAIL';
 export const Handle_FOCUS = 'Handle_FOCUS';
+export const Details_FAIL = 'Details_FAIL';
+export const Details_SUCCESS = 'Details_SUCCESS';
