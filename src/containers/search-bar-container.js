@@ -11,7 +11,8 @@ function mapStateToProps(state) {
        searchResults:state.searchResults.searchResults,
        searchValue:state.frqPackages.searchValue,
        inprogress:state.searchResults.inprogress,
-       activeIndex:state.searchResults.activeIndex
+       activeIndex:state.searchResults.activeIndex,
+       defaultInput:state.searchResults.defaultInput
     };
 }
 

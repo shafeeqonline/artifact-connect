@@ -1,11 +1,12 @@
-import { Result_SUCCESS, Result_FAIL,Search_SUCCESS,Search_FAIL, Handle_FOCUS} from '../constants/action-types';
+import { Result_SUCCESS, Result_FAIL,Search_SUCCESS,Search_FAIL, Handle_FOCUS,Update_INPUT_VALUE} from '../constants/action-types';
 
 export default function frequentPackageDetailReducer(state = {
 	results:[],
 	inprogress:true,
 	dataError:false,
 	searchResults:[],
-	activeIndex: -1
+	activeIndex: -1,
+	defaultInput:''
 }, action) {
   switch (action.type) {
 	  case Result_SUCCESS:
@@ -32,7 +33,8 @@ export default function frequentPackageDetailReducer(state = {
 	    });
 	    case Handle_FOCUS:
 	    return Object.assign({},state,{
-	    	activeIndex:action.activeIndex
+	    	activeIndex:action.activeIndex,
+	    	defaultInput:action.defaultInput
 	    });
 	  default:
 	    return state;

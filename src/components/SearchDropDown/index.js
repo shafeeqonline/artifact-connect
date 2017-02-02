@@ -40,23 +40,7 @@ export default class SearchDropDown extends Component{
 			
 		
 	}
-	handleKeyDown(e,numOptions){
-		switch(e.keyCode){
 
-	      case 38: // up arrow
-	        if (this.props.activeIndex>0) {
-	          this.props.handleDownArrow( this.props.activeIndex-1);
-	        } else {
-	          this.props.handleDownArrow(numOptions-1);
-	        }
-	        break;
-
-	      case 40: // down arrow
-	        this.props.handleDownArrow((this.props.activeIndex+1) % numOptions);
-	        break;
-	    }
-
-	}
 	render(){
 		let display;
 		let value=this.props.searchValue;
@@ -67,15 +51,16 @@ export default class SearchDropDown extends Component{
 			display='disable-suggestions';
 		}
 		let numOptions = this.props.searchResults.length;
+		let activeIndex = this.props.activeIndex;
 		if(numOptions>0){
 				return(
 					<div className={display} >
 						{this.props.searchResults.map((result,index)=>{
-							let classes = cx({active: this.props.activeIndex===index});
+							let classes = cx({active: activeIndex===index});
 							if(value != ''){
 								return (
 								<Link to='/details' key={index} className='a'>
-								 	<div className = {classes} onKeyDown={this.handleKeyDown.bind(this,numOptions)}>
+								 	<div className = {classes} >
 									{this.displaySearchResults(result.value,value)}
 									</div>
 								</Link>

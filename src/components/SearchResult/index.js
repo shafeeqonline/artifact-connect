@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './search-results.scss';
+import PopularCategories from './../../containers/popular-categories';
+import FrequentPackagesContainer from './../../containers/frequent-packages-container';
 export default class SearchResult extends Component{
 	componentWillMount() {
 		this.props.fetchResults();
@@ -35,12 +37,16 @@ export default class SearchResult extends Component{
 		}
 		else{
 			return(
-				<div className='col-md-7 search-result'>
-					<h4>3 PACKAGES FOUND</h4>
-					<div>for <b>'ieadexa'</b></div>
-					<ul className='results'>
-						{results}
-					</ul>
+				<div>
+					<PopularCategories />
+					<div className='col-md-7 search-result'>
+						<h4>3 PACKAGES FOUND</h4>
+						<div>for <b>'ieadexa'</b></div>
+						<ul className='results'>
+							{results}
+						</ul>
+					</div>
+					<FrequentPackagesContainer />
 				</div>
 			)
 		}

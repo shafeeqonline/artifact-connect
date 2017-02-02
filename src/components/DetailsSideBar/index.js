@@ -6,7 +6,7 @@ export default class DetailsSideBar extends Component{
 		let publisher = {this.props.publisher}+' published '+{this.props.published};
 		let version = 'version : '+{this.props.version}
 		return(
-			<aside>
+			<aside className= 'col-md-3'>
 				<ul>
 					<li>
 						<img src = {this.props.logo} />
