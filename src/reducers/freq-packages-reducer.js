@@ -6,8 +6,7 @@ export default function frequentPackageDetailReducer(state = {
 	dataError:false,
 	enable:false,
 	searchSelected:false,
-	searchValue:'',
-	searchResults:['ieadexa','ieadexa-aem-build','ieadexa-code-quality-configs','ieadexa-collection','ieadexa-engine']
+	searchValue:''
 }, action) {
   switch (action.type) {
 	  case Request_FULFILLED_FREQ:

@@ -7,3 +7,6 @@ export const Result_FAIL = 'Result_FAIL';
 export const TOOGLING_SEARCH_SUGGESTIONS = 'TOOGLING_SEARCH_SUGGESTIONS';
 export const TOOGLING_SEARCH_SELECTED = 'TOOGLING_SEARCH_SELECTED';
 export const UPDATE_SEARCH_VALUE = 'UPDATE_SEARCH_VALUE';
+export const Search_SUCCESS = 'Search_SUCCESS';
+export const Search_FAIL = 'Search_FAIL';
+export const Handle_FOCUS = 'Handle_FOCUS';

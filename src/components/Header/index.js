@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Logo from './../Logo';
 import SearchBarContainer from './../../containers/search-bar-container';
 import UserDetails from './../UserDetails';
-
+import {Link} from 'react-router';
 import './header.scss';
 
 export default class Header extends Component{
@@ -10,7 +10,7 @@ export default class Header extends Component{
 		return(
 			<div>
 				<div className = 'nav-bar'>
-					<span>Home</span>
+					<span><Link to='/'>Home</Link></span>
 					<span>Docs</span>
 					<span>Help</span>
 				</div>

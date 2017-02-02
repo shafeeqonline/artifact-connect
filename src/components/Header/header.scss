@@ -10,5 +10,11 @@
 		padding: 0 5%;
 		display: inline-block;
 		vertical-align:  -webkit-baseline-middle;
+		a{
+			color: white;
+			&:focus, &:hover{
+				text-decoration:none;
+			}
+		}
 	}
 }
