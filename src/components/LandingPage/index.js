@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PopularCategories from './../../containers/popular-categories';
 import Header from './../Header';
-import MostInstalledContainer from './../../containers/most-installed-container';
-import FrequentPackagesContainer from './../../containers/frequent-packages-container'
+import PageFooter from './../PageFooter';
 import './landing-page.scss';
 export default class LandingPage extends Component{
 	componentWillMount(){
@@ -17,6 +16,7 @@ export default class LandingPage extends Component{
 				<div>
 					<Header />
 					{this.props.children}
+					<PageFooter />
 				</div>
 			)
 		}

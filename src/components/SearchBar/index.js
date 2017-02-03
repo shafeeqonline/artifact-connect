@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
 import {browserHistory} from 'react-router';
-import SearchDropDown from './../SearchDropDown';
 import './search-bar.scss';
 import debounce from 'lodash.debounce';
-let ClickOutHandler = require('react-onclickout');
+import SearchDropDown from './../../containers/search-drop-down-container';
 
 export default class SearchBar extends Component{
 	constructor(props){
@@ -13,12 +12,12 @@ export default class SearchBar extends Component{
 		this.searchFunction = debounce(this.searchFunction.bind(this),200);
 	}
 	searchFunction(){
-		let value = this.searchInputTitle.value;
+		/*let value = this.searchInputTitle.value;
 		if(value){
 			this.props.searchSuggestion(true);
 			this.props.updateSearchValue(value);
 			this.props.fetchSearchSuggestions(value);
-		}
+		}*/
 	}	
 	onClickOut(){
 		this.props.searchSuggestion(false);
@@ -49,14 +48,10 @@ export default class SearchBar extends Component{
 		console.log(this.props.defaultInput)
 		return(
 		<div className = 'search-bar'>
-			<ClickOutHandler onClickOut={this.onClickOut.bind(this)}>
-				<input className = 'search-input' placeholder = 'Search' onChange={this.searchFunction.bind(this)} ref={(el) => {this.searchInputTitle = el;}} onClick = {this.searchFunction.bind(this)} onKeyDown = {this.handleKeyDown.bind(this)} defaultvalue={this.props.defaultInput}/>
-				<Link to='/results'>
+				<input className = 'search-input' placeholder = 'Search' ref={(el) => {this.searchInputTitle = el;}} onClick = {this.searchFunction.bind(this)} onKeyDown = {this.handleKeyDown.bind(this)} defaultvalue={this.props.defaultInput}/>
+				<Link to='/results' className='search-router'>
 					<span className = 'search-icon fa fa-search'></span>
-				</Link>
-			</ClickOutHandler>
-				<SearchDropDown enable={this.props.enable} searchSelected={this.props.searchSelected} searchResults={this.props.searchResults} selectedSearch={this.props.selectedSearch} searchValue={this.props.searchValue} inprogress={this.props.inprogress} handleDownArrow={this.props.handleDownArrow} activeIndex={this.props.activeIndex}/>
-			
+				</Link>	
 		</div>
 		)
 	}

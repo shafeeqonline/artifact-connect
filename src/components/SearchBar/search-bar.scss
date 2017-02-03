@@ -4,15 +4,14 @@
     display: inline-block;
     padding: 10px;
     vertical-align: top;
-}
-
-.search-input{
-	background:transparent;
-	height: 40px;
-    width: 95%;
+    .search-input{
+    background:transparent;
+    height: 40px;
+    width: 90%;
     border: 0;
     border-bottom: 2px solid grey;
     outline: none;
+    font-size:1.5em;
     &::-webkit-input-placeholder {
         color: #595858;
         font-size: 20px;
@@ -26,6 +25,7 @@
         font-size: 20px;
     }
 }
+}
 
 .search-icon{
 	width: 50px;
@@ -34,4 +34,9 @@
     padding: 10px;
     font-size: 1.4em;
     color: #8c8c8c;
+}
+.search-router{
+    &:hover{
+        text-decoration:none;
+    }
 }

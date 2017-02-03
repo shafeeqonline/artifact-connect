@@ -4,7 +4,7 @@ import { Request_FULFILLED_FREQ, Request_REJECTED_FREQ} from '../constants/actio
 export default function fetchPopularData(){
 		//AJAX call to fetch project list data
 	return function(dispatch){
-		axios.get('https://api.myjson.com/bins/qbf9p')
+		axios.get('https://api.myjson.com/bins/mhrhd')
 		.then(function (response) {	
 		    // Dispatch the success action with the payload
     		dispatch({

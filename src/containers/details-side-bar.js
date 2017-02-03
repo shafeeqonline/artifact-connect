@@ -1,16 +1,17 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 //components
-import DetailsSideBar from '../components/DetailsSideBar';
-//actions
-import {fetchPackageDetails} from '../actions/search-result-action.js';
+import DetailsSideBar from './../components/DetailsSideBar';
+import {fetchPackageDetails} from './../actions/search-result-action';
 
 const mapStateToProps = (state)=> {
+	console.log(state.searchResults.detailsInprogress);
 	return {
-		inprogress:state.frqPackages.inprogress,
+		inprogress:state.searchResults.detailsInprogress,
 		packageDetails:state.searchResults.details
 	};
  }
+
 const mapDispatchToProps = (dispatch) =>{
 
 	return bindActionCreators({

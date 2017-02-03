@@ -1,4 +1,5 @@
 .popular-tag-container{
+	font-family:'SapientSansMedium';
 	word-wrap: break-word;
 	text-align:center;
 	margin-top:20px;
@@ -24,6 +25,13 @@
 		.text-size-5{
 			font-size:18px;
 	    	color: #356cb0;
+		}
+	}
+	.tag-icon-container{
+		width:50px;
+		height:50px;
+		.tag-icon{
+			width:50px;
 		}
 	}
 }

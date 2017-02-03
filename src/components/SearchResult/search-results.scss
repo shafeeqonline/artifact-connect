@@ -1,4 +1,5 @@
 .search-result{
+
 	margin:30px 0 0 0 ;
 	padding:0 2% 0 5%;
 	.results{
@@ -9,20 +10,26 @@
 		border-bottom: 1px solid #C2C2C2;
 	}
 	.search-publisher{
+		font-family:'SapientSansMedium';
 		cursor:pointer;
 		color:#CACACA;
 		font-size: 16px;
 	}
 	.result-description , .result-version {
-		padding:0 0 0 10%;
+		font-family:'SapientSansRegular';
+		padding:0 0 0 7%;
+	}
+	.result-version{
+		color:#a7a7a7;
 	}
 	.search-result-title{
+	font-family:'SapientSansMedium';
 		cursor:pointer;
 		display: inline-block;
 		vertical-align: top;
 	}
 	.search-logo-container{
-	width:70px;
+	width:55px;
 	height: 50px;
 	text-align:left; 
 	display: inline-block;

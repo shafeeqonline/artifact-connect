@@ -1,13 +1,16 @@
-import { Result_SUCCESS, Result_FAIL,Search_SUCCESS,Search_FAIL, Handle_FOCUS,Update_INPUT_VALUE,Details_SUCCESS,Details_FAIL} from '../constants/action-types';
+import { Result_SUCCESS, Result_FAIL,Search_SUCCESS,Search_FAIL, Handle_FOCUS,Update_INPUT_VALUE,Details_SUCCESS,Details_FAIL,Description_FAIL,Description_SUCCESS} from '../constants/action-types';
 
-export default function frequentPackageDetailReducer(state = {
+export default function searchResultsReducer(state = {
 	results:[],
 	inprogress:true,
 	dataError:false,
 	searchResults:[],
 	activeIndex: -1,
 	defaultInput:'',
-	details:{}
+	details:{},
+	detailsInprogress:true,
+	descInprogress:true,
+	SearchInprogress:true
 }, action) {
   switch (action.type) {
 	  case Result_SUCCESS:
@@ -23,12 +26,12 @@ export default function frequentPackageDetailReducer(state = {
 	    });
 	    case Search_SUCCESS:
 	    return Object.assign({},state,{
-	    	inprogress:false,
+	    	SearchInprogress:false,
 	    	searchResults:action.payload
 	    });
 	    case Search_FAIL:
 	    return Object.assign({},state,{
-	    	inprogress:false,
+	    	SearchInprogress:false,
 	    	dataError:true,
 	    	error:action.error
 	    });
@@ -39,12 +42,23 @@ export default function frequentPackageDetailReducer(state = {
 	    });
 	    case Details_SUCCESS:
 	    return Object.assign({},state,{
-	    	inprogress:false,
+	    	detailsInprogress:false,
 	    	details:action.payload
 	    });
 	    case Details_FAIL:
 	    return Object.assign({},state,{
-	    	inprogress:false,
+	    	detailsInprogress:false,
+	    	dataError:true,
+	    	error:action.error
+	    });
+	     case Description_SUCCESS:
+	    return Object.assign({},state,{
+	    	descInprogress:false,
+	    	descriptionData:action.payload
+	    });
+	    case Description_FAIL:
+	    return Object.assign({},state,{
+	    	descInprogress:false,
 	    	dataError:true,
 	    	error:action.error
 	    });

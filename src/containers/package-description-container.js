@@ -1,10 +1,21 @@
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+//actions
+import {fetchProjectDescription} from '../actions/search-result-action.js'
 //component
 import PackageDesctiption from './../components/PackageDesctiption';
 const mapStateToProps = (state)=> {
-	let result='hii' 
+	
 	return {
-		result
+		inprogress:state.searchResults.descInprogress,
+		data:state.searchResults.descriptionData
 	};
  }
-export default connect(mapStateToProps)(PackageDesctiption)
+const mapDispatchToProps = (dispatch) =>{
+
+	return bindActionCreators({
+								fetchProjectDescription
+						 	 },dispatch);
+}
+export default connect(mapStateToProps,mapDispatchToProps)(PackageDesctiption);
+

@@ -12,3 +12,5 @@ export const Search_FAIL = 'Search_FAIL';
 export const Handle_FOCUS = 'Handle_FOCUS';
 export const Details_FAIL = 'Details_FAIL';
 export const Details_SUCCESS = 'Details_SUCCESS';
+export const Description_SUCCESS = 'Description_SUCCESS';
+export const Description_FAIL = 'Description_FAIL';

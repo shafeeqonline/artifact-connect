@@ -1,29 +1,35 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
+import { Table } from 'react-materialize';
 import './details-side-bar.scss';
 export default class DetailsSideBar extends Component{
 	componentWillMount(){
 		this.props.fetchPackageDetails();
 	}
 	render(){
-		console.log('here');
-		console.log(this.props.packageDetails.versionHistory);
-		let publisher = this.props.packageDetails.publisher+' published '+this.props.packageDetails.published;
+		let publisher = this.props.packageDetails.publisher;
+		let published = this.props.packageDetails.published;
 		let version = 'version : '+this.props.packageDetails.version
-		return(
-			<aside className='col-md-3'>
+		let repoLink = 'https://'+this.props.packageDetails.github;
+		if(this.props.inprogress){
+			return <div className='loader'>Loading...</div>
+		}
+		else{
+			
+			return(
+			<aside className='col-md-4 package-details-side'>
 				<ul className='details-list'>
 					<li>
 						<figure className = 'details-logo-container'>
 						<img className = 'publisher-logo' src = {this.props.packageDetails.logo} alt={this.props.packageDetails.publisher}/>
 						</figure>
-						<span>{publisher}</span>
+						<span><strong>{publisher}</strong> published <strong>{published}</strong></span>
 					</li>
 					<li>{version}</li>
-					<li><a>{this.props.packageDetails.github}</a></li>
+					<li className='github-repo-link'><a href={repoLink}>{this.props.packageDetails.github}</a></li>
 					<li>{this.props.packageDetails.license}</li>
 				</ul>
-				<div className='details-side-bar'>
+				<div className='details'>
 					<h4>Collaborators:</h4>
 
 					{this.props.packageDetails.collaborators.map((src,index)=>{
@@ -34,18 +40,24 @@ export default class DetailsSideBar extends Component{
 						)
 					})}
 				</div>
-				<div className='details-side-bar'>
+				<div className='details'>
 					<h4>Version History</h4>
-					<table className='version-history'>
+					<Table stripped centered className='version-history'>
+					<thead>
 						<tr><th>Version</th><th>Date</th></tr>
+					</thead>
+					<tbody>
 						{this.props.packageDetails.versionHistory.map((verObj,index)=>{
 							return(
 								<tr><td>{verObj.version}</td><td>{verObj.release}</td></tr>
 							)
 						})}
-					</table>
+					</tbody>
+					</Table>
 				</div>
 			</aside>
 		)
+		}
+		
 	}
 }

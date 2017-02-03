@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router';
 import './search-results.scss';
 import PopularCategories from './../../containers/popular-categories';
 import FrequentPackagesContainer from './../../containers/frequent-packages-container';
@@ -7,7 +8,6 @@ export default class SearchResult extends Component{
 		this.props.fetchResults();
 	}
 	getResults(){
-		console.log(this.props.searchResult);
 		if(this.props.searchResult.results){
 			return (this.props.searchResult.results.map((data,index)=>{
 					return (<li className='result-list' key = {index}>
@@ -15,11 +15,11 @@ export default class SearchResult extends Component{
 									<img src={data.logo} className='search-package-logo' alt='package logo'/>
 								</div>
 								<h3 className='search-result-title'>
-									<a className='title'>{data.title}</a>
+									<Link to='/details' className='title'>{data.title}</Link>
 									<a className='search-publisher'> {data.publisher}</a>
 								</h3>
 								<p className='result-description'>{data.description}</p>
-								<span className='result-version'>{data.version}</span>
+								<span className='result-version'>v{data.version}</span>
 							</li>
 					);
 				})
