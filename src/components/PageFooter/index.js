@@ -18,7 +18,7 @@ export default class PageFooter extends Component {
       <li><a className="grey-text text-lighten-4 text-styling" href="#!">Security</a></li>
     </ul>
   }
-  className='col-md-12 user-footer'
+  className='col-md-12'
 >
     
 </Footer>

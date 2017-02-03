@@ -9,7 +9,7 @@ export default class DetailsSideBar extends Component{
 	render(){
 		let publisher = this.props.packageDetails.publisher;
 		let published = this.props.packageDetails.published;
-		let version = 'version : '+this.props.packageDetails.version
+		let version = this.props.packageDetails.version
 		let repoLink = 'https://'+this.props.packageDetails.github;
 		if(this.props.inprogress){
 			return <div className='loader'>Loading...</div>
@@ -19,13 +19,7 @@ export default class DetailsSideBar extends Component{
 			return(
 			<aside className='col-md-4 package-details-side'>
 				<ul className='details-list'>
-					<li>
-						<figure className = 'details-logo-container'>
-						<img className = 'publisher-logo' src = {this.props.packageDetails.logo} alt={this.props.packageDetails.publisher}/>
-						</figure>
-						<span><strong>{publisher}</strong> published <strong>{published}</strong></span>
-					</li>
-					<li>{version}</li>
+					<li>Current Version : {version}</li>
 					<li className='github-repo-link'><a href={repoLink}>{this.props.packageDetails.github}</a></li>
 					<li>{this.props.packageDetails.license}</li>
 				</ul>
@@ -47,7 +41,7 @@ export default class DetailsSideBar extends Component{
 						<tr><th>Version</th><th>Date</th></tr>
 					</thead>
 					<tbody>
-						{this.props.packageDetails.versionHistory.map((verObj,index)=>{
+						{this.props.packageDetails.versionHistory.reverse().map((verObj,index)=>{
 							return(
 								<tr><td>{verObj.version}</td><td>{verObj.release}</td></tr>
 							)
