@@ -5,7 +5,9 @@ import './steps-button.scss'
 export default class StepsButton extends Component{
 	render(){
 		return(
-			<Button className='steps-button' waves='light'>Steps to Publish<Icon left>info</Icon></Button>
+			<Link to='/steps-to-publish'>
+				<Button className='steps-button' waves='light'>Steps to Publish<Icon left>info</Icon></Button>
+			</Link>	
 		)
 	}
 }

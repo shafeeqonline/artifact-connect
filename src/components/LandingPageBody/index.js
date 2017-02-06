@@ -11,7 +11,7 @@ export default class LandingPageBody extends Component{
 		}
 		else{
 			return(
-				<div>
+				<div className = 'clearfix'>
 					<PopularCategories />
 					<MostInstalledContainer />
 					<FrequentPackagesContainer />

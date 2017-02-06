@@ -20,7 +20,8 @@ export default class PageFooter extends Component {
   }
   className='col-md-12'
 >
-    
+    <h5 className="white-text">Lorem Ipsum</h5>
+    <p className="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla ligula non dictum mattis. Cras porttitor porttitor tortor, a consectetur ipsum sollicitudin nec. Etiam sollicitudin eros ac enim mattis, sed laoreet turpis pulvinar. Curabitur elementum dolor sit amet lacus varius tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla eget ex venenatis, suscipit velit ut, efficitur urna. Fusce in sagittis enim, non pellentesque leo. Praesent non mauris nec nulla lobortis semper.</p>
 </Footer>
     );
   }
