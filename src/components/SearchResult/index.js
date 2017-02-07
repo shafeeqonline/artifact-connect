@@ -37,7 +37,7 @@ export default class SearchResult extends Component{
 		}
 		else{
 			return(
-				<div>
+				<div className='clearfix'>
 					<PopularCategories />
 					<div className='col-md-7 search-result'>
 						<h4>3 PACKAGES FOUND</h4>
