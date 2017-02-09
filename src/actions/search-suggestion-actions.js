@@ -21,7 +21,6 @@ export const updateSearchValue = (searchValue) =>{
 }
 
 export const handleDownArrow = (activeIndex,defaultInput) =>{
-	console.log(activeIndex)
 	return {
 		type:Handle_FOCUS,
 		activeIndex,

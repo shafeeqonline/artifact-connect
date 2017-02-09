@@ -1,0 +1,21 @@
+.carousel-container{
+  margin: 15px auto 0 0;
+  width: 100%;
+  color: #333;
+}
+
+.slick-prev {
+    left: 0px;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 0px;
+    z-index:1;
+}
+
+.slick-slide img {
+    display: block;
+    width: 100%;
+    height:325px;
+}

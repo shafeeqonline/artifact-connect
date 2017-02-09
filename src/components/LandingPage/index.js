@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PopularCategories from './../../containers/popular-categories';
 import Header from './../Header';
 import PageFooter from './../PageFooter';
-import './landing-page.scss';
 export default class LandingPage extends Component{
 	componentWillMount(){
 		this.props.fetchPopularData();

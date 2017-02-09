@@ -25,8 +25,8 @@ export function fetchResults(){
 }
 
 export function fetchSearchSuggestions(searchKey){
-	return function(dispatch){
-		let url = 'https://ac.cnstrc.com/autocomplete/'+searchKey+'?autocomplete_key=CD06z4gVeqSXRiDL2ZNK&query='+searchKey;
+	/*return function(dispatch){*/
+		/*let url = 'https://ac.cnstrc.com/autocomplete/'+searchKey+'?autocomplete_key=CD06z4gVeqSXRiDL2ZNK&query='+searchKey;
 		axios.get(url)
 		.then(function (response) {	
 		    // Dispatch the success action with the payload
@@ -41,8 +41,9 @@ export function fetchSearchSuggestions(searchKey){
 		        type: Search_FAIL,
 		        error: error
 		    });
-    	});
-	};
+    	});*/
+    	
+	/*};*/
 
 }
 
@@ -69,14 +70,15 @@ export function fetchPackageDetails(){
 
 export function fetchProjectDescription(){
 	return function(dispatch){
-		let url = 'https://api.github.com/repos/shafeeqonline/artifact-connect/readme';
+		let url = 'http://10.207.16.108:8081/artifactory/npm-local/elevator/-/elevator-1.0.0.tgz%21/package/README.md';
+		
 		axios.get(url)
 		.then(function (response) {	
+			console.log(response);
 		    // Dispatch the success action with the payload
-		    let data = atob(response.data.content)
     		dispatch({
 		        type: Description_SUCCESS,
-		        payload: data,
+		        payload: response.data,
         	});
     	}.bind(this))
 	  	.catch(function (error) {

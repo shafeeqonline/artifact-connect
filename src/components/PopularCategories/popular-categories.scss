@@ -1,11 +1,21 @@
 .popular-categories-container{
 	font-family:'SapientSansMedium';
-	margin-top:20px;
+	margin:15px 0 0 0;
+	padding: 0;
 	.popular-categories{
-	list-style:none;
-	padding:0px;
-	margin:0;
-	cursor:pointer;
-	padding:10px 0 25px 1%;
+	background: #535353;
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    cursor: pointer;
+    padding: 5px 0 55px 1%;
+	.popular-list{
+		padding: 12px 10%;
+	    border-left: 10px solid #c73131;
+	    border-bottom: 1px solid #908f8e;
+	    a{
+	    	color:#fff;
+	    }
+	}
 	}
 }

@@ -15,14 +15,10 @@ export default class MostIntsalledPackages extends Component{
 			let packages= this.packageComponent();
 			return (
 
-				
-						<section className='col-md-7 packages-container'>
+						<section className='col-md-12 packages-container'>
 							<h1 className='most-installed-header'>Packages people 'install' a lot</h1>
 							{packages}
 						</section>
-						
-				
-				
 				);
 		
 	}

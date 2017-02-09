@@ -12,20 +12,12 @@
 			text-decoration: none;
 
 	}
-	.active{
-	background-color:#337ab7;
-	color:#fff;
-	}
 	div{
 		font-family: 'SapientSansRegular';
 		padding-left: 2%;
 		padding-top: 15px;
 		height: 50px;
-		background-color: #fff;
-		&:hover{
-			background-color: #E7E7E7;
-		}
-		
+				
 		.sub-string{
 			font-weight: bold; 
 			font-size:1.2em; 

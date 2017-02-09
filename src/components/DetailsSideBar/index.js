@@ -28,7 +28,7 @@ export default class DetailsSideBar extends Component{
 
 					{this.props.packageDetails.collaborators.map((src,index)=>{
 						return(
-						<figure className = 'details-logo-container'>
+						<figure key={index} className = 'details-logo-container'>
 							<img className = 'publisher-logo' src={src} alt ={this.props.packageDetails.publisher}/>
 						</figure>
 						)
@@ -43,7 +43,7 @@ export default class DetailsSideBar extends Component{
 					<tbody>
 						{this.props.packageDetails.versionHistory.reverse().map((verObj,index)=>{
 							return(
-								<tr><td>{verObj.version}</td><td>{verObj.release}</td></tr>
+								<tr key={index}><td>{verObj.version}</td><td>{verObj.release}</td></tr>
 							)
 						})}
 					</tbody>

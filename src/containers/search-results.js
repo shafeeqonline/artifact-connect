@@ -6,7 +6,6 @@ import SearchResult from '../components/SearchResult';
 import {fetchResults} from '../actions/search-result-action.js';
 
 const mapStateToProps = (state)=> {
-	console.log(state.searchResults);
 	return {
 		searchResult:state.searchResults.results
 	};

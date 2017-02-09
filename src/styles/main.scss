@@ -1,5 +1,7 @@
 @import './bootstrap.scss';
 @import '../fonts/font-face.scss';
+@import './skin.scss';
+
 *{
 	margin: 0;
 	padding: 0;
@@ -11,4 +13,12 @@ body{
 	min-height:100vh;
     padding-bottom: 260px;
     position: relative;
+}
+
+.loader{
+	margin: 100px auto;
+	text-align:center;
+	font-size:32px;
+	color:#9C9C9C;
+	font-weight:bold;
 }

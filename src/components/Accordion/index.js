@@ -10,12 +10,12 @@ export default class Accordion extends Component{
 	toggle(x){
 		if(x===1){
 			this.setState({
-				active:[true,false]
+				active:[!this.state.active[0],false]
 			})
 		}
 		else if(x===2){
 			this.setState({
-				active:[false,true]
+				active:[false,!this.state.active[1]]
 			})
 		}
 		

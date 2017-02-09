@@ -5,7 +5,6 @@ import DetailsSideBar from './../components/DetailsSideBar';
 import {fetchPackageDetails} from './../actions/search-result-action';
 
 const mapStateToProps = (state)=> {
-	console.log(state.searchResults.detailsInprogress);
 	return {
 		inprogress:state.searchResults.detailsInprogress,
 		packageDetails:state.searchResults.details

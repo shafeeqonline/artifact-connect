@@ -38,15 +38,18 @@ export default class SearchResult extends Component{
 		else{
 			return(
 				<div className='clearfix'>
-					<PopularCategories />
-					<div className='col-md-7 search-result'>
+					<div className='col-md-3'>
+						<PopularCategories />
+						<FrequentPackagesContainer />
+					</div>
+					<div className='col-md-9 search-result'>
 						<h4>3 PACKAGES FOUND</h4>
 						<div>for <b>'ieadexa'</b></div>
 						<ul className='results'>
 							{results}
 						</ul>
 					</div>
-					<FrequentPackagesContainer />
+					
 				</div>
 			)
 		}

@@ -4,25 +4,42 @@ import {browserHistory} from 'react-router';
 import './search-bar.scss';
 import debounce from 'lodash.debounce';
 import SearchDropDown from './../../containers/search-drop-down-container';
-
+var aql = require('jfrog-aql');
 export default class SearchBar extends Component{
 	constructor(props){
 		super(props)
 		this.searchInputTitle = null;
 		this.searchFunction = debounce(this.searchFunction.bind(this),200);
 	}
-	searchFunction(){
-		/*let value = this.searchInputTitle.value;
-		if(value){
+	searchFunction(value){
+		let input = this.searchInputTitle.value;
+		/*if(value){
 			this.props.searchSuggestion(true);
 			this.props.updateSearchValue(value);
-			this.props.fetchSearchSuggestions(value);
+			
 		}*/
+		/*var username = "shafeeq",
+			password = "password",
+			auth = "Basic " + new Buffer(username + ":" + password).toString("base64");
+		  // config object is used by the Request class
+		  aql.config({
+		        uri: "http://10.207.16.108:8081/artifactory/api/search/aql",
+		        headers: {
+		           Authorization: auth
+		        }
+		     });
+
+		  var aqlQuery = aql.items.find({"name":{"$eq":input}});
+    		aql.query(aqlQuery).then((data) => {
+        	console.log(data);
+    		});*/
+				
+		
 	}	
 	onClickOut(){
 		this.props.searchSuggestion(false);
 	}
-	handleKeyDown(e){
+	handleKeyDown(e,value){
 		let numOptions = this.props.searchResults.length;
 		switch(e.keyCode){
 
@@ -38,7 +55,7 @@ export default class SearchBar extends Component{
 	      	let activeIndex=(this.props.activeIndex+1) % numOptions;
 	        this.props.handleDownArrow(activeIndex,this.props.searchResults[activeIndex].value);
 	        break;
-	        case 13:
+	      case 13:
 	        browserHistory.push('/details')
 	        this.props.searchSuggestion(false);
 	        break;

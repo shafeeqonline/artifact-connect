@@ -4,17 +4,7 @@ const webpack = require('webpack');
 const config = require('./webpack.config.dev');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 
-var aql = require('jfrog-aql'),
-      username = "shafeeq",
-      password = "password",
-      auth = "Basic " + new Buffer(username + ":" + password).toString("base64");
-  // config object is used by the Request class
-  aql.config({
-        uri: "http://10.207.16.108:8081/artifactory/api/search/aql",
-        headers: {
-           Authorization: auth
-        }
-     });
+
 
 const app = express();
 const compiler = webpack(config);
@@ -30,14 +20,6 @@ app.use(require('webpack-dev-middleware')(compiler, {
 }));
 
 app.use(require('webpack-hot-middleware')(compiler));
-
-app.get('/jfrog', (req, res) => {
-            console.log("jfrog")
-var aqlQuery = aql.items.find().include("*").limit(10);
-   aql.query(aqlQuery).then((data) => {
-         console.log(data);
-      });
-});
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));

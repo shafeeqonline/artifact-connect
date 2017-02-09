@@ -8,7 +8,7 @@ export default class PackageDesctiption extends Component{
 		this.props.fetchProjectDescription();
 	}
 	render(){
-		let result ="<div className='loader'>Loading...</div>";
+		let result ="<div class='loader'>Loading...</div>";
 		if(this.props.data!=null){
 			result = md.render(this.props.data);
 		}

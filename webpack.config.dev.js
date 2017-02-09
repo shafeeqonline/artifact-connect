@@ -16,6 +16,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
+    new webpack.IgnorePlugin(/cls-bluebird/, /request-promise/),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     }),
@@ -49,5 +50,11 @@ module.exports = {
         loader: 'json'
       }
     ]
-  }
+  },
+  externals: {
+        fs: '{}',
+        tls: '{}',
+        net: '{}',
+        console: '{}'
+    }
 };

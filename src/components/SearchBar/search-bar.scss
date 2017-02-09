@@ -13,15 +13,12 @@
     outline: none;
     font-size:1.5em;
     &::-webkit-input-placeholder {
-        color: #595858;
         font-size: 20px;
     }
     &::-moz-placeholder {  /* Firefox 19+ */
-        color: #595858;
         font-size: 20px;
     }
     &:-ms-input-placeholder {  
-        color: #595858;
         font-size: 20px;
     }
 }
@@ -33,7 +30,6 @@
     display: inline;
     padding: 10px;
     font-size: 1.4em;
-    color: #8c8c8c;
 }
 .search-router{
     &:hover{
